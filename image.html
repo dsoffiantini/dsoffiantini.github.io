@@ -1,0 +1,54 @@
+<body ng-controller="imageController">
+
+    <div class="imageUrlContainer">
+        <div class="imageUrlImage">
+            <img class="editImage" src="{{myImage.url}}" alt="{{image}}"/>
+            <div class="shareImage">
+              <img src="./img/icons/facebook.svg" alt="Facebook" />
+              <img src="./img/icons/twitter.svg" alt="Twitter" />
+              <img src="./img/icons/twitter-2.svg" alt="Twitter" />
+              <img src="./img/icons/pinterest.svg" alt="Pinterest" />
+            </div>
+        </div>
+    </div>
+    <div class="below-image">
+        <div class="imageInformation">
+            <div>Name:
+                {{image}}</div>
+            <div>Description:
+                {{myImage.description}}</div>
+            <div>Likes:
+                {{myImage.likes}}</div>
+            <div>Categories:
+                {{myImage.category}}</div>
+        </div>
+        <div class="imageEditor">
+            <ul class="effects">
+                <li>Blur:
+                    <input class="blur" type="input" name="blur" value="0"></li>
+                <li>Brightness:
+                    <input class="brightness" type="input" name="brightness" value="100"></li>
+                <li>Contrast:
+                    <input class="contrast" type="input" name="contrast" value="100"></li>
+                <li>Grayscale:
+                    <input class="grayscale" type="input" name="grayscale" value="0"></li>
+                <li>Hue Rotate:
+                    <input class="huerotate" type="input" name="huerotate" value="0"></li>
+                <li>Invert:
+                    <input class="invert" type="input" name="invert" value="0"></li>
+                <li>Opacity:
+                    <input class="opacity" type="input" name="opacity" value="100"></li>
+                <li>Saturate:
+                    <input class="saturate" type="input" name="saturate" value="100"></li>
+                <li>Sepia:
+                    <input class="sepia" type="input" name="sepia" value="0"></li>
+            </ul>
+            <button type="button" name="button" class="editButton">Edit!</button>
+            <button type="button" name="button" class="resetButton">Reset!</button>
+        </div>
+    </div>
+
+    <script src="./scripts/jquery-2.2.4.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/imageController.js"></script>
+</body>

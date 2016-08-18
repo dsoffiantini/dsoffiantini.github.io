@@ -1,47 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/reset.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="./styles/main.css" media="screen" title="no title" charset="utf-8">
-    <title>Express Clone</title>
+    <link rel="stylesheet" href="./styles/reset.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./styles/main.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./styles/animate.css" media="screen" charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="./img/heart-filled.png"/>
+    <title>I Heart It - Image Gallery Built in AngularJS</title>
   </head>
-  <body>
-    <nav class = "navbar">
-        <div class="logo"><img src="img\Express Logo.png" alt="Express Logo" /></div>
-        <section class = "navlinks">
-          <div class="Link"><a href="#">Men</a></div>
-          <div class="Link"><a href="#">Women</a></div>
-          <div class="Link red"><a href="#">Sale</a></div>
-        </section>
-    </nav>
-    <main class = "main-container">
-      <header class = "largebackground">
-        <div class="header-overlay">
-          <div class="overlay-large-text">Time To Shop!</div>
-          <div class="overlay-small-text">Shop our cool clothes, we know you want to. Here's a bunch of extra text, just meant to show this dynamically scales, but other than that there isn't much more to say on this super real store.</div>
-            <button class="button">Shop Now</button>
-        </div>
-      </header>
-      <section class = "medium-container">
-        <div class = "medium-img-1"></div>
-        <div class = "medium-img-2"></div>
-        <div class = "medium-img-3"></div>
-      </section>
-      <hr>
-      <section>
-        <div class="wide-bottom"></div>
-      </section>
-      <hr>
-    </main>
-    <div class="blank-footer"></div>
-    <footer class = "coolfooter">
-      <div class="footer-link"><a href="#">Link</a></div>
-      <div class="footer-link"><a href="#">Link</a></div>
-      <div class="footer-logo"></div>
-      <div class="footer-link"><a href="#">Link</a></div>
-      <div class="footer-link"><a href="#">Link</a></div>
-    </footer>
+  <body ng-controller = "controller">
+    <header class = "main-header">
+      <nav class = "top-nav">
+        <ul class = "top-links">
+          <li><a ui-sref="home"><img border="0" alt="Heart It Logo" src="./img/heart it logo.png"></a></li>
+          <li><a ui-sref="categories">Categories</a></li>
+          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="login">Login</a></li>
+          <li><a ui-sref="signup">Sign Up</a></li>
+          <li><input type="text" placeholder="Search for images" ng-model="input"></li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+    <ui-view></ui-view>
+    <script src="./scripts/jquery-2.2.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="./scripts/dirPagination.js"></script>
+    <script src = "./scripts/main.js"></script>
+    <script src = "./scripts/app.js"></script>
+    <script src = "./scripts/controller.js"></script>
+    <script src = "./scripts/imageController.js"></script>
+    <script src = "./scripts/categoryController.js"></script>
+    <script src = "./scripts/service.js"></script>
   </body>
 </html>

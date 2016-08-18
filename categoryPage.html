@@ -1,0 +1,19 @@
+<body ng-controller="categoryController">
+
+<!-- {{category}}
+
+{{myCategory}} -->
+
+<div class = "categoryPageContainer">
+  <div class="categoryImageContainer">
+
+
+  <ul class = "categoryPageImages" ng-repeat="image in myCategory">
+    <a ui-sref="image({imageName: image.name})">
+      <img class = "categoryPageImage" src="{{image.url}}" alt="{{image.name}}" />
+    </a>
+  </ul>
+  </div>
+</div>
+<script src = "./scripts/categoryController.js"></script>
+</body>

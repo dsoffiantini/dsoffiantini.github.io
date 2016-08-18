@@ -1,0 +1,11 @@
+<main class = "main-content">
+  <h2>Categories</h2>
+  <div class="category-container">
+  <ul class = "categories" ng-repeat="category in categories | orderBy: 'name' ">
+      <a ui-sref="category({categoryName: category.name})"><img class = "category" ng-src="{{category.url}}" alt="{{category.name}}"/></a>
+        <div class="category-overlay">
+          {{category.name}}
+        </div>
+  </ul>
+  </div>
+</main>

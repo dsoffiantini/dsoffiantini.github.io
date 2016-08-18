@@ -1,0 +1,30 @@
+<main class = "main-content">
+  <h2>Categories</h2>
+  <div class="category-container">
+  <ul class = "categories" ng-repeat="category in categories | orderBy: 'name' ">
+      <a ui-sref="category({categoryName: category.name})">
+        <img class = "category" ng-src="{{category.url}}" alt="{{category.name}}"/>
+      </a>
+        <div class="category-overlay">
+          {{category.name}}
+        </div>
+  </ul>
+  </div>
+  <h2>Popular Images</h2>
+  <div class="image-container">
+  <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
+  <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
+    <a ui-sref="image({imageName: image.name})">
+    <div class = "overlay">
+        <div class="like animated fadeIn" ng-click="addLike(image)"><img src="./img/heart-outline.png" alt="" /></img></div>
+      <div class="counter animated fadeIn">{{image.likes}}</div>
+    </div>
+    </a>
+  </ul>
+  </div>
+
+</main>
+<!-- <dir-pagination-controls></dir-pagination-controls> -->
+<script src="./scripts/jquery-2.2.4.min.js"></script>
+<script src = "./scripts/main.js"></script>
+<script src="./scripts/dirPagination.js"></script>
